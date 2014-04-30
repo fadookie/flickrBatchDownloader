@@ -1,0 +1,21 @@
+.hidden {
+    display:none;
+}
+
+.error {
+    color:red;
+}
+
+#results {
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+#resultsContainer {
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+.footer {
+    font-size: 0.6em;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flickr Batch Photoset Download Tool</title>
+  <meta name="description" content="Flickr Batch Photoset Download Tool">
+  <meta name="author" content="Eliot Lash">
+
+  <script src="string.format.js"></script>
+  <script src="main.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="spinner.css">
+</head>
+
+<body>
+    <p>This page is a tool for downloading original-size images from <a href="https://www.flickr.com/">Flickr photosets</a>.  Given a photoset ID, it will generate a page of links to the original size photos, if available. You can then use a download manager such as <a href="https://addons.mozilla.org/en-US/firefox/addon/downthemall/">DownThemAll!</a> for Firefox to save the photos. You could also copy-paste the links into a batch download tool such as <a href="https://chrome.google.com/webstore/detail/downloadall/ajffocjdcmpgjmdfdfkdfdbkjafbkcke">DownloadAll for Chrome</a>, wget or curl. You may change the delimiter string to format output for copy-pasting.</p>
+    <form name="setInfo" onsubmit="return fetchSet()">
+        <input type="text" name="setId" placeholder="Flickr Photoset ID">
+        <input type="text" name="delim" size="27" placeholder="Delimiter string (optional)">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="resultsContainer">
+        <div id="spinner" class="hidden">
+            <div class="blockG" id="rotateG_01">
+            </div>
+            <div class="blockG" id="rotateG_02">
+            </div>
+            <div class="blockG" id="rotateG_03">
+            </div>
+            <div class="blockG" id="rotateG_04">
+            </div>
+            <div class="blockG" id="rotateG_05">
+            </div>
+            <div class="blockG" id="rotateG_06">
+            </div>
+            <div class="blockG" id="rotateG_07">
+            </div>
+            <div class="blockG" id="rotateG_08">
+            </div>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+    <p class="footer">This tool makes use of <a href="https://developer.yahoo.com/yql/">Yahoo Query Language</a> and is written in pure JavaScript.</p>
+    <p class="footer">Copyright (c) 2014 Eliot Lash. <a href="#">Source code</a> is available under an <a href="#">MIT-style license<a/>.</p>
+</body>
+</html>
